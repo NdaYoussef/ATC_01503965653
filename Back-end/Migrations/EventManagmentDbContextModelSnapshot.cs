@@ -107,6 +107,37 @@ namespace EventManagmentTask.Migrations
                     b.ToTable("Events");
                 });
 
+            modelBuilder.Entity("EventManagmentTask.Models.RefreshToken", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("ExpiresOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("RevokedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshToken");
+                });
+
             modelBuilder.Entity("EventManagmentTask.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -149,6 +180,9 @@ namespace EventManagmentTask.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -390,6 +424,13 @@ namespace EventManagmentTask.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("EventManagmentTask.Models.RefreshToken", b =>
+                {
+                    b.HasOne("EventManagmentTask.Models.User", null)
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("EventTag", b =>
                 {
                     b.HasOne("EventManagmentTask.Models.Event", null)
@@ -471,6 +512,8 @@ namespace EventManagmentTask.Migrations
                     b.Navigation("Bookings");
 
                     b.Navigation("Events");
+
+                    b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618
         }
