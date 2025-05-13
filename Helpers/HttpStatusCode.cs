@@ -10,6 +10,7 @@
         Forbidden = 403,
         NotFound = 404,
         InternalServerError = 500,
-        ServiceUnavailable = 503
+        ServiceUnavailable = 503,
+        Conflict = 504
     }
 }

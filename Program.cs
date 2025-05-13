@@ -2,14 +2,17 @@
 using CloudinaryDotNet;
 using EventManagmentTask.Data;
 using EventManagmentTask.Interfaces;
+using EventManagmentTask.Mapping;
 using EventManagmentTask.Models;
 using EventManagmentTask.Repositories;
 using EventManagmentTask.Services;
 using EventManagmentTask.UploadSetiings;
+using Mapster;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Security.Principal;
 using System.Text;
 
@@ -28,16 +31,19 @@ namespace EventManagmentTask
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //Connection String
+            #region Connection String
             builder.Services.AddDbContext<EventManagmentDbContext>(options =>
-           options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            //add identity
+            #endregion
+
+            #region Add identity
             builder.Services.AddIdentity<User, IdentityRole>()
-             .AddEntityFrameworkStores<EventManagmentDbContext>()
-             .AddDefaultTokenProviders();
+                             .AddEntityFrameworkStores<EventManagmentDbContext>()
+                             .AddDefaultTokenProviders(); 
+            #endregion
 
-            //add Authentication 
+            #region Add Authentication 
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -56,11 +62,12 @@ namespace EventManagmentTask
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!)),
                     ClockSkew = TimeSpan.Zero
                 };
-            });
+            }); 
+            #endregion
 
-            //cloudinary Dependency Injection
+            #region Cloudinary Settings&Dependency Injection
             builder.Services.Configure<CloudinarySettings>(
-              builder.Configuration.GetSection("CloudinarySettings"));
+               builder.Configuration.GetSection("CloudinarySettings"));
             var cloudinarySettings = builder.Configuration.GetSection("CloudinarySettings").Get<CloudinarySettings>();
             if (cloudinarySettings == null ||
                 string.IsNullOrEmpty(cloudinarySettings.CloudName) ||
@@ -74,11 +81,62 @@ namespace EventManagmentTask
             );
             var cloudinary = new Cloudinary(account);
 
-            builder.Services.AddSingleton(cloudinary);
+            builder.Services.AddSingleton(cloudinary); 
+            #endregion
 
-            //Inject Services 
+
+            #region  Inject Services 
             builder.Services.AddScoped<ICloudinaryRepository, CloudinaryService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IEventRepository, EventService>();
+            builder.Services.AddScoped<IAccountRepository, AccountService>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryService>();
+            builder.Services.AddScoped<IBookingRepository, BookingService>();
+            #endregion
+
+            #region Adding mapster 
+            builder.Services.AddMapster();
+            TypeAdapterConfig.GlobalSettings.Scan(typeof(MapsterConfig).Assembly);
+            #endregion
+
+            
+            #region Add authorization headers
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter your JWT token",
+                });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference{Type = ReferenceType.SecurityScheme , Id = "Bearer"}
+                        },
+                        new string []{}
+                    }
+                });
+            });
+            #endregion
+
+            #region Add authorization policy
+            builder.Services.AddAuthorization(options =>
+             {
+                 options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+                 options.AddPolicy("Organizer", policy => policy.RequireRole("Organizer"));
+                 options.AddPolicy("CLient", policy => policy.RequireRole("CLient"));
+                 options.AddPolicy("Admin and Organizer", policy => policy.RequireRole("Admin", "Organizer"));
+             });
+
+            #endregion
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -89,20 +147,18 @@ namespace EventManagmentTask
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();
 
-            //seed roles in DB
+            #region seed roles in DB
             using (var scope = app.Services.CreateScope())
             {
                 var rolemanager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-                await  SeedingRoles.SeedingRolesAsync(rolemanager);
-            }
+                await SeedingRoles.SeedingRolesAsync(rolemanager);
+            } 
+            #endregion
         }
     }
 }
