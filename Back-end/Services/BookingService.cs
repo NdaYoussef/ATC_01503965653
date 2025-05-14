@@ -10,7 +10,9 @@ namespace EventManagmentTask.Services
 {
     public class BookingService : IBookingRepository
     {
-        private readonly EventManagmentDbContext _context;
+        #region Dependencies
+        private readonly EventManagmentDbContext _context; 
+        #endregion
 
         #region Constructor
         public BookingService(EventManagmentDbContext context)
@@ -19,8 +21,8 @@ namespace EventManagmentTask.Services
         }
         #endregion
 
-        #region Services
-   
+        #region Services implementation
+
 
         public async Task<ResponseDto> CreateBookingAsync(BookingDto dto)
         {

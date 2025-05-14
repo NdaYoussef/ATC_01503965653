@@ -12,17 +12,22 @@ namespace EventManagmentTask.Services
 {
     public class AccountService : IAccountRepository
     {
+        #region Dependencies
         private readonly EventManagmentDbContext _context;
         private readonly UserManager<User> _userManager;
-        private readonly ITokenService _tokenService;
+        private readonly ITokenService _tokenService; 
+        #endregion
 
-        public AccountService(EventManagmentDbContext context , UserManager<User> userManager, ITokenService tokenService) : base()
+        #region Constructor
+        public AccountService(EventManagmentDbContext context, UserManager<User> userManager, ITokenService tokenService) : base()
         {
             _context = context;
             _userManager = userManager;
             _tokenService = tokenService;
         }
+        #endregion
 
+        #region Services implementation
         public async Task<ResponseDto> RegisterAsync(RegisterDto registerDto)
         {
             if (await _userManager.FindByEmailAsync(registerDto.Email) is not null
@@ -208,5 +213,6 @@ namespace EventManagmentTask.Services
             };
         }
 
+        #endregion
     }
 }

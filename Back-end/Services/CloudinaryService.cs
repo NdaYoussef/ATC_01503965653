@@ -6,14 +6,21 @@ namespace EventManagmentTask.Services
 {
     public class CloudinaryService : ICloudinaryRepository
     {
+        #region Dependencies
         private readonly Cloudinary _cloudinary;
-        private readonly ILogger<CloudinaryService> _logger;
+        private readonly ILogger<CloudinaryService> _logger; 
+        #endregion
+
+        #region Constructor
         public CloudinaryService(Cloudinary cloudinary, ILogger<CloudinaryService> logger)
         {
             _cloudinary = cloudinary;
             _logger = logger;
         }
 
+        #endregion
+
+        #region Services implementation
         public async Task<string> UploadImageAsync(IFormFile file)
         {
             if (file == null || file.Length == 0)
@@ -38,6 +45,7 @@ namespace EventManagmentTask.Services
 
             _logger.LogInformation($"File uploaded successfully. Public URL: {uploadResult.SecureUrl}");
             return uploadResult.SecureUrl.AbsoluteUri;
-        }
+        } 
+        #endregion
     }
 }

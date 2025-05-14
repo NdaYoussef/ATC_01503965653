@@ -13,18 +13,23 @@ namespace EventManagmentTask.Services
 {
     public class EventService : IEventRepository
     {
+        #region Dependencies
         private readonly EventManagmentDbContext _context;
         private readonly ILogger<EventService> _logger;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public EventService(EventManagmentDbContext context, ILogger<EventService> logger , IHttpContextAccessor httpContextAccessor) : base()
+        #endregion
+
+        #region Constructor
+        public EventService(EventManagmentDbContext context, ILogger<EventService> logger, IHttpContextAccessor httpContextAccessor) : base()
         {
             _context = context;
             _logger = logger;
             _httpContextAccessor = httpContextAccessor;
         }
+        #endregion
 
 
-
+        #region Services implementation
         public async Task<ResponseDto> GetAllEvents()
         {
             var events = await _context.Events
@@ -107,7 +112,7 @@ namespace EventManagmentTask.Services
                 };
             }
 
-            
+
             var userId = _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             if (userId == null)
@@ -237,7 +242,8 @@ namespace EventManagmentTask.Services
                 IsSucceeded = true,
                 StatusCode = 200
             };
-        }
+        } 
+        #endregion
 
 
     }

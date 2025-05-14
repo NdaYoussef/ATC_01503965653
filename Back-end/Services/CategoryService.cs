@@ -10,13 +10,18 @@ namespace EventManagmentTask.Services
 {
     public class CategoryService : ICategoryRepository
     {
+        #region Dependencies
         private readonly EventManagmentDbContext _context; 
+        #endregion
 
+        #region Constructor
         public CategoryService(EventManagmentDbContext context) : base()
         {
-          _context = context;
+            _context = context;
         }
+        #endregion
 
+        #region Services implementation 
         public async Task<ResponseDto> GetAllCategories()
         {
             var categories = await _context.Categories.ToListAsync();
@@ -65,9 +70,9 @@ namespace EventManagmentTask.Services
                 Data = categoryDto
             };
         }
-    
 
-       
+
+
 
         public async Task<ResponseDto> AddCategoryAsync(CategoryDto categoryDto)
         {
@@ -172,6 +177,7 @@ namespace EventManagmentTask.Services
                 StatusCode = 200,
                 Data = deletedDto
             };
-        }
+        } 
+        #endregion 
     }
 }
