@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "F:\\ATC_01503965653\\Back-end\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\mapping\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +35,12 @@
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:interfaces\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\dtos\\eventdto\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,14 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\migrations\\20250513115231_editrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:migrations\\20250513115231_editrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -166,76 +166,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Category.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:53:54.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EventDto.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\DTOs\\EventDTO\\EventDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\EventDTO\\EventDto.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\DTOs\\EventDTO\\EventDto.cs",
-              "RelativeToolTip": "DTOs\\EventDTO\\EventDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:44:21.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "Services\\EventService.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\EventService.cs",
-              "RelativeToolTip": "Services\\EventService.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAUwL0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:45:32.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IEventRepository.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Interfaces\\IEventRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IEventRepository.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Interfaces\\IEventRepository.cs",
-              "RelativeToolTip": "Interfaces\\IEventRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:43:06.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "EventController.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventController.cs",
               "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\EventController.cs",
               "RelativeToolTip": "Controllers\\EventController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAIwEoAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwE8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T10:36:51.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "Services\\CategoryService.cs",
@@ -248,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "SeedingRoles.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Data\\SeedingRoles.cs",
               "RelativeDocumentMoniker": "Data\\SeedingRoles.cs",
@@ -261,20 +209,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\ATC_01503965653\\Back-end\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwFoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAQwIsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T12:30:42.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Event.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Models\\Event.cs",
               "RelativeDocumentMoniker": "Models\\Event.cs",
@@ -287,13 +235,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwCQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwDgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T12:27:45.312Z",
               "EditorCaption": ""
@@ -301,6 +249,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwD8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:16:55.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T10:31:32.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEventRepository.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Interfaces\\IEventRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IEventRepository.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Interfaces\\IEventRepository.cs",
+              "RelativeToolTip": "Interfaces\\IEventRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:43:06.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventService.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\EventService.cs",
+              "RelativeDocumentMoniker": "Services\\EventService.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\EventService.cs",
+              "RelativeToolTip": "Services\\EventService.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAUwLQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:45:32.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EventDto.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\DTOs\\EventDTO\\EventDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\EventDTO\\EventDto.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\DTOs\\EventDTO\\EventDto.cs",
+              "RelativeToolTip": "DTOs\\EventDTO\\EventDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:44:21.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Category.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:53:54.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MapsterConfig.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Mapping\\MapsterConfig.cs",
               "RelativeDocumentMoniker": "Mapping\\MapsterConfig.cs",
@@ -313,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\DTOs\\CategoryDto.cs",
               "RelativeDocumentMoniker": "DTOs\\CategoryDto.cs",
@@ -326,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "Models\\RefreshToken.cs",
@@ -339,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TokenService.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
@@ -352,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "EventManagmentDbContext.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Data\\EventManagmentDbContext.cs",
               "RelativeDocumentMoniker": "Data\\EventManagmentDbContext.cs",
@@ -365,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AccountService.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "Services\\AccountService.cs",
@@ -378,19 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAowFUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:31:32.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "User.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -415,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\DTOs\\UserDto\\RegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserDto\\RegisterDto.cs",
@@ -427,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Role.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Helpers\\Role.cs",
               "RelativeDocumentMoniker": "Helpers\\Role.cs",
@@ -451,19 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "Controllers\\BookingController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAswFUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:16:55.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "EventManagmentTask.csproj",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\EventManagmentTask.csproj",
               "RelativeDocumentMoniker": "EventManagmentTask.csproj",
@@ -475,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "20250513115231_EditRelations.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Migrations\\20250513115231_EditRelations.cs",
               "RelativeDocumentMoniker": "Migrations\\20250513115231_EditRelations.cs",

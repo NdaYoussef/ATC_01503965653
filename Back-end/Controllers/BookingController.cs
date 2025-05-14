@@ -48,6 +48,7 @@ namespace EventManagmentTask.Controllers
             return StatusCode(response.StatusCode, new { response.Message });
         }
 
+        [Authorize(Policy = "Admin")]
 
         [HttpGet("GetUserBookings")]
         public async Task<IActionResult> GetUserBookings(string userId)
@@ -60,6 +61,7 @@ namespace EventManagmentTask.Controllers
             return StatusCode(response.StatusCode, new { response.Message });
         }
 
+        [Authorize(Policy = "CLient")]
 
         [HttpPost("CreateBooking")]
         public async Task<IActionResult> CreateBooking(BookingDto booking)
@@ -84,6 +86,7 @@ namespace EventManagmentTask.Controllers
                 return Ok(response);
             return StatusCode(response.StatusCode, new { response.Message });
         }
+
 
         [HttpDelete("CancelBooking")]
         public async Task<IActionResult> CancelBooking(string userId, int eventId)

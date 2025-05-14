@@ -16,10 +16,11 @@ namespace EventManagmentTask.Controllers
         public CategoryController(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
-        } 
+        }
         #endregion
 
         #region EndPoints
+
 
 
         [HttpGet("Categories")]
