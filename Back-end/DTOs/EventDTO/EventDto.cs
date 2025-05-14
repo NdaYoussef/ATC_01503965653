@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace EventManagmentTask.DTOs
+namespace EventManagmentTask.DTOs.EventDTO
 {
     public class EventDto
     {
@@ -13,8 +13,8 @@ namespace EventManagmentTask.DTOs
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
         public int CategoryId { get; set; }
-        public string UserId { get; set; } 
+        public string? UserId { get; set; }
 
-        public List<int> TagIds { get; set; } = new List<int>();
+        public List<int>? TagIds { get; set; } = new List<int>();
     }
 }

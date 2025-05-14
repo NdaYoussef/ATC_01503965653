@@ -49,7 +49,7 @@ namespace EventManagmentTask.Services
 
             if (!roles.Any())
             {
-                Console.WriteLine(" No roles found for this user!");
+                Console.WriteLine("🚨 No roles found for this user!");
             }
 
             foreach (var role in roles)

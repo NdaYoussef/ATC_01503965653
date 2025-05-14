@@ -14,10 +14,10 @@
         public Category Category { get; set; }
 
         public string UserId { get; set; }  // FK to User
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
-        public ICollection<Tag> Tags { get; set; } = new List<Tag>();
-        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+        public virtual ICollection<Tag> Tags { get; set; } = new List<Tag>();
+        public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
     }
 }

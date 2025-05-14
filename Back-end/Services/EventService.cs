@@ -1,11 +1,13 @@
 ﻿using EventManagmentTask.Data;
 using EventManagmentTask.DTOs;
+using EventManagmentTask.DTOs.EventDTO;
 using EventManagmentTask.Interfaces;
 using EventManagmentTask.Models;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.Design;
 using System.Net;
+using System.Security.Claims;
 
 namespace EventManagmentTask.Services
 {
@@ -13,52 +15,15 @@ namespace EventManagmentTask.Services
     {
         private readonly EventManagmentDbContext _context;
         private readonly ILogger<EventService> _logger;
-        public EventService(EventManagmentDbContext context, ILogger<EventService> logger) : base()
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public EventService(EventManagmentDbContext context, ILogger<EventService> logger , IHttpContextAccessor httpContextAccessor) : base()
         {
             _context = context;
             _logger = logger;
+            _httpContextAccessor = httpContextAccessor;
         }
 
 
-        public async Task<ResponseDto> EditEvent(EventDto eventDto)
-        {
-            var eventEntity = await _context.Events
-                                              .Include(e => e.Tags)
-                                              .FirstOrDefaultAsync(e => e.Id == eventDto.Id);
-
-            if (eventEntity == null)
-            {
-                return new ResponseDto
-                {
-                    Message = "Event not found.",
-                    IsSucceeded = false,
-                    StatusCode = 404
-                };
-            }
-            int id = eventEntity.Id;
-            eventEntity = eventDto.Adapt(eventEntity);
-            eventEntity.Id = id;
-
-            eventEntity.Tags.Clear();
-            foreach (var tagId in eventDto.TagIds)
-            {
-                var tag = await _context.Tags.FindAsync(tagId);
-                if (tag != null)
-                {
-                    eventEntity.Tags.Add(tag);
-                }
-            }
-
-            await _context.SaveChangesAsync();
-
-            return new ResponseDto
-            {
-                Message = "Event updated successfully.",
-                IsSucceeded = true,
-                StatusCode = (int)HttpStatusCode.OK,
-                Data = eventEntity
-            };
-        }
 
         public async Task<ResponseDto> GetAllEvents()
         {
@@ -66,6 +31,7 @@ namespace EventManagmentTask.Services
                                         .Include(e => e.Category)
                                         .Include(e => e.User)
                                         .Include(e => e.Tags)
+                                        .AsNoTracking()
                                         .ToListAsync();
             return new ResponseDto
             {
@@ -73,7 +39,7 @@ namespace EventManagmentTask.Services
                 IsSucceeded = true,
                 StatusCode = (int)HttpStatusCode.OK,
                 Data = events.Adapt<List<EventDto>>()
-            };         
+            };
         }
 
         public async Task<ResponseDto> GetEventsById(int id)
@@ -93,6 +59,7 @@ namespace EventManagmentTask.Services
                                           .Include(e => e.Category)
                                           .Include(e => e.User)
                                           .Include(e => e.Tags)
+                                          .AsNoTracking()
                                           .FirstOrDefaultAsync(e => e.Id == id);
 
             if (eventItem == null)
@@ -140,11 +107,25 @@ namespace EventManagmentTask.Services
                 };
             }
 
+            
+            var userId = _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+            {
+                return new ResponseDto
+                {
+                    Message = "User is not authenticated.",
+                    IsSucceeded = false,
+                    StatusCode = 401
+                };
+            }
+
             var eventEntity = eventDto.Adapt<Event>();
+            eventEntity.UserId = userId;  // User id 
 
             _context.Events.Add(eventEntity);
 
-            foreach (var tagId in eventDto.TagIds)
+            foreach (var tagId in eventDto.TagIds!)
             {
                 var tag = await _context.Tags.FindAsync(tagId);
                 if (tag != null)
@@ -164,6 +145,61 @@ namespace EventManagmentTask.Services
                 Data = dto
             };
         }
+
+        public async Task<ResponseDto> EditEvent(EventDto eventDto, int id)
+        {
+            if (id <= 0)
+            {
+                _logger.LogWarning("Invalid event ID: {EventId}", id);
+                return new ResponseDto
+                {
+                    Message = "Invalid event ID.",
+                    IsSucceeded = false,
+                    StatusCode = (int)HttpStatusCode.NotFound
+                };
+            }
+
+            var eventEntity = await _context.Events.FindAsync(id);
+
+            if (eventEntity == null)
+            {
+                return new ResponseDto
+                {
+                    Message = "Event not found.",
+                    IsSucceeded = false,
+                    StatusCode = 404
+                };
+            }
+
+            // Load tags explicitly (lazy loading assumed)
+            await _context.Entry(eventEntity).Collection(e => e.Tags).LoadAsync();
+
+            eventEntity = eventDto.Adapt(eventEntity);
+
+            // Update tags
+            eventEntity.Tags.Clear();
+            foreach (var tagId in eventDto.TagIds)
+            {
+                var tag = await _context.Tags.FindAsync(tagId);
+                if (tag != null)
+                {
+                    eventEntity.Tags.Add(tag);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            var updatedDto = eventEntity.Adapt<EventDto>();
+
+            return new ResponseDto
+            {
+                Message = "Event updated successfully.",
+                IsSucceeded = true,
+                StatusCode = (int)HttpStatusCode.OK,
+                Data = updatedDto
+            };
+        }
+
 
         public async Task<ResponseDto> DeleteEvent(int id)
         {

@@ -11,6 +11,7 @@ using Mapster;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Security.Principal;
@@ -81,9 +82,15 @@ namespace EventManagmentTask
             );
             var cloudinary = new Cloudinary(account);
 
-            builder.Services.AddSingleton(cloudinary); 
+            builder.Services.AddSingleton(cloudinary);
             #endregion
 
+            #region Lazy Loading injection
+            builder.Services.AddDbContext<EventManagmentDbContext>(options =>
+            options.UseLazyLoadingProxies()
+           .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            #endregion
 
             #region  Inject Services 
             builder.Services.AddScoped<ICloudinaryRepository, CloudinaryService>();
@@ -138,6 +145,15 @@ namespace EventManagmentTask
 
 
             var app = builder.Build();
+            #region seed roles in DB
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+                await SeedingRoles.SeedingRolesAsync(roleManager);
+            }
+            #endregion
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -152,13 +168,7 @@ namespace EventManagmentTask
 
             app.Run();
 
-            #region seed roles in DB
-            using (var scope = app.Services.CreateScope())
-            {
-                var rolemanager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-                await SeedingRoles.SeedingRolesAsync(rolemanager);
-            } 
-            #endregion
+         
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace EventManagmentTask.DTOs
+﻿using EventManagmentTask.DTOs.EventDTO;
+
+namespace EventManagmentTask.DTOs
 {
     public class CategoryDto
     {

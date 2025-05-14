@@ -1,4 +1,4 @@
-﻿using EventManagmentTask.DTOs;
+﻿using EventManagmentTask.DTOs.EventDTO;
 using EventManagmentTask.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -65,14 +65,14 @@ namespace EventManagmentTask.Controllers
 
         [Authorize(Policy = "Admin and Organizer")]
 
-        [HttpPut("EditEvent")]
+        [HttpPut("EditEvent/{id}")]
  
-        public async Task<IActionResult> EditEvent([FromBody] EventDto eventDto)
+        public async Task<IActionResult> EditEvent([FromBody] EventDto eventDto,int id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var response = await _eventRepository.EditEvent(eventDto);
+            var response = await _eventRepository.EditEvent(eventDto,id);
             if (response.IsSucceeded)
                 return Ok(response);
 
