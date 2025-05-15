@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "F:\\ATC_01503965653\\Back-end\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,26 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB99A98A-9DEB-464F-AA99-390A4AF552B1}|EventManagmentTask.csproj|f:\\atc_01503965653\\back-end\\mapping\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -166,11 +166,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\AccountService.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\AccountService.cs",
+              "RelativeToolTip": "Services\\AccountService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAhwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T11:35:11.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "Services\\BookingService.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\BookingService.cs",
+              "RelativeToolTip": "Services\\BookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T10:50:44.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:27:45.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:16:55.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T10:31:32.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EventController.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventController.cs",
@@ -183,72 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Services\\CategoryService.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\CategoryService.cs",
-              "RelativeToolTip": "Services\\CategoryService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAhwAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:19:47.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:31:32.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "Services\\AccountService.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\AccountService.cs",
-              "RelativeToolTip": "Services\\AccountService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAhwA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T11:35:11.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\BookingService.cs",
-              "RelativeDocumentMoniker": "Services\\BookingService.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\BookingService.cs",
-              "RelativeToolTip": "Services\\BookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:50:44.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CloudinaryService.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\CloudinaryService.cs",
-              "RelativeDocumentMoniker": "Services\\CloudinaryService.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\CloudinaryService.cs",
-              "RelativeToolTip": "Services\\CloudinaryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:44:25.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "EventService.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "Services\\EventService.cs",
@@ -261,42 +257,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "Controllers\\BookingController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwD8AAAAmAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "CloudinaryService.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\CloudinaryService.cs",
+              "RelativeDocumentMoniker": "Services\\CloudinaryService.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\CloudinaryService.cs",
+              "RelativeToolTip": "Services\\CloudinaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:16:55.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T12:44:25.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\ATC_01503965653\\Back-end\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAQwIsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAQwJwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T12:30:42.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAcwDgAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "F:\\ATC_01503965653\\Back-end\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\CategoryService.cs",
+              "ToolTip": "F:\\ATC_01503965653\\Back-end\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Services\\CategoryService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAhwAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:27:45.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:19:47.238Z"
             },
             {
               "$type": "Document",
@@ -308,8 +302,7 @@
               "RelativeToolTip": "Models\\Event.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAywBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:49:47.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T11:49:47.166Z"
             },
             {
               "$type": "Document",
@@ -321,8 +314,7 @@
               "RelativeToolTip": "Data\\SeedingRoles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:27:29.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T12:27:29.968Z"
             },
             {
               "$type": "Document",
@@ -334,8 +326,7 @@
               "RelativeToolTip": "Interfaces\\IEventRepository.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:43:06.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T12:43:06.835Z"
             },
             {
               "$type": "Document",
@@ -347,8 +338,7 @@
               "RelativeToolTip": "DTOs\\EventDTO\\EventDto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:44:21.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T12:44:21.325Z"
             },
             {
               "$type": "Document",
@@ -360,8 +350,7 @@
               "RelativeToolTip": "Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:53:54.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T11:53:54.059Z"
             },
             {
               "$type": "Document",
@@ -373,8 +362,7 @@
               "RelativeToolTip": "Mapping\\MapsterConfig.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T11:44:47.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T11:44:47.727Z"
             },
             {
               "$type": "Document",
@@ -386,8 +374,7 @@
               "RelativeToolTip": "DTOs\\CategoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:18:33.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:18:33.733Z"
             },
             {
               "$type": "Document",
@@ -399,8 +386,7 @@
               "RelativeToolTip": "Models\\RefreshToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:03:59.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T12:03:59.583Z"
             },
             {
               "$type": "Document",
@@ -412,8 +398,7 @@
               "RelativeToolTip": "Services\\TokenService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvyMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:47:37.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T12:47:37.096Z"
             },
             {
               "$type": "Document",
@@ -425,8 +410,7 @@
               "RelativeToolTip": "Data\\EventManagmentDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:01:02.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T12:01:02.744Z"
             },
             {
               "$type": "Document",
@@ -438,8 +422,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:09:51.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T11:09:51.609Z"
             },
             {
               "$type": "Document",

@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* Main Navbar */
+#nav-links {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+@media (max-width: 640px) {
+    #nav-links {
+        transform: translateY(-100%);
+        opacity: 0;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #2563eb;
+        padding: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    #nav-links button {
+        margin: 4px 0;
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 641px) {
+    #nav-links {
+        display: flex !important;
+    }
+    #menu-toggle {
+        display: none;
+    }
+}
+/* Admin Sidebar */
+#admin-sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+#admin-sidebar-nav button.active {
+    background-color: #1f2937;
+    border-left: 4px solid #3b82f6;
+}
+@media (max-width: 767px) {
+    #admin-sidebar {
+        transform: translateY(-100%);
+        position: fixed;
+        top: 64px;
+        z-index: 10;
+    }
+    #admin-sidebar.active {
+        transform: translateY(0);
+    }
+    #admin-sidebar-nav {
+        display: none;
+    }
+    #admin-sidebar-nav.active {
+        display: block;
+    }
+    #admin-sidebar-nav button {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 768px) {
+    #admin-sidebar {
+        transform: translateX(0) !important;
+        position: fixed;
+        top: 64px;
+        bottom: 0;
+    }
+    #admin-sidebar-toggle {
+        display: none;
+    }
+    #admin-sidebar-nav {
+        display: block !important;
+    }
+    #admin-screen {
+        margin-left: 16rem;
+    }
+}

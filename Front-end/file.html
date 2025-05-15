@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="antialiased">
+    <div class="flex min-h-screen flex-col md:flex-row">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-primary text-primary-foreground w-full md:w-64 flex-shrink-0 md:sticky md:top-0 md:h-screen animate-slideIn">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-6">EventHub</h2>
+                <ul class="space-y-2" id="nav-menu">
+                    <li><a href="#" onclick="showHome()" class="block hover:bg-primary/80 px-4 py-2 rounded transition duration-200">Home</a></li>
+                    <li><a href="#" onclick="showRegister()" class="block hover:bg-primary/80 px-4 py-2 rounded transition duration-200">Register</a></li>
+                    <li><a href="#" onclick="showLogin()" class="block hover:bg-primary/80 px-4 py-2 rounded transition duration-200">Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Header -->
+            <div class="bg-primary text-primary-foreground p-6 shadow-md">
+                <h2 class="text-3xl font-bold">EventHub Dashboard</h2>
+            </div>
+
+            <!-- Content -->
+            <div class="container mx-auto p-6 space-y-12">
+                <!-- Home (Event Listings) -->
+                <div id="home-section" class="animate-fadeIn">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Events</h2>
+                    <div id="event-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Events will be dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Login Box -->
+                <div id="login-section" class="hidden animate-fadeIn">
+                    <div class="max-w-md mx-auto border border-border rounded-lg p-6 shadow-lg">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Login</h2>
+                        <input type="text" id="login-username" placeholder="Username" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                        <input type="password" id="login-password" placeholder="Password" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                        <button onclick="handleLogin()" class="bg-primary text-primary-foreground hover:bg-primary/90 p-3 rounded w-full transition duration-200">Log In</button>
+                    </div>
+                </div>
+
+                <!-- Register Box -->
+                <div id="register-section" class="hidden animate-fadeIn">
+                    <div class="max-w-md mx-auto border border-border rounded-lg p-6 shadow-lg">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Register</h2>
+                        <input type="text" id="register-username" placeholder="Username" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                        <input type="email" id="register-email" placeholder="Email" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                        <input type="password" id="register-password" placeholder="Password" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                        <button onclick="handleRegister()" class="bg-primary text-primary-foreground hover:bg-primary/90 p-3 rounded w-full transition duration-200">Register</button>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard (Hidden Initially) -->
+                <div id="admin-dashboard" class="hidden animate-fadeIn">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Admin Panel</h2>
+                    <div class="border border-border rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Manage Events</h3>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <button onclick="showCreateEventForm()" class="bg-accent text-accent-foreground hover:bg-accent/90 p-3 rounded transition duration-200">Create Event</button>
+                            <button onclick="showViewEvents()" class="bg-primary text-primary-foreground hover:bg-primary/90 p-3 rounded transition duration-200">View Events</button>
+                        </div>
+                        <!-- Create Event Form (Hidden Initially) -->
+                        <div id="create-event-form" class="hidden">
+                            <h4 class="text-lg font-semibold mb-4">Create New Event</h4>
+                            <input type="text" id="event-name" placeholder="Event Name" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                            <textarea id="event-description" placeholder="Description" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition"></textarea>
+                            <input type="text" id="event-category" placeholder="Category" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                            <input type="date" id="event-date" class="border border-border p-3 rounded 소비자 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                            <input type="text" id="event-venue" placeholder="Venue" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                            <input type="number" id="event-price" placeholder="Price ($)" class="border border-border p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-primary transition" />
+                            <button onclick="createEvent()" class="bg-primary text-primary-foreground hover:bg-primary/90 p-3 rounded w-full transition duration-200">Save Event</button>
+                        </div>
+                        <!-- View Events List (Hidden Initially) -->
+                        <div id="view-events-list" class="hidden">
+                            <h4 class="text-lg font-semibold mb-4">All Events</h4>
+                            <div id="admin-event-list" class="space-y-4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Details -->
+                <div id="event-details" class="hidden animate-fadeIn">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Event Details</h2>
+                    <div id="event-details-content" class="border border-border rounded-lg p-6 shadow-lg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Event.js"></script>
+</body>
+</html>
