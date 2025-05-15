@@ -142,19 +142,7 @@ namespace EventManagmentTask
              });
 
             #endregion
-            #region Add Cores
-
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll",
-                    policy =>
-                    {
-                        policy.AllowAnyOrigin()
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
-            });
-            #endregion
+ 
 
             var app = builder.Build();
             #region seed roles in DB
@@ -174,7 +162,6 @@ namespace EventManagmentTask
                 app.UseSwaggerUI();
             }
 
-            app.UseCors("AllowAll");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
