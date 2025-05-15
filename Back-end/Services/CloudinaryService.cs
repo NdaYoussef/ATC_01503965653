@@ -1,6 +1,7 @@
 ﻿using CloudinaryDotNet.Actions;
 using CloudinaryDotNet;
 using EventManagmentTask.Repositories;
+using Microsoft.Extensions.Logging;
 
 namespace EventManagmentTask.Services
 {
@@ -39,9 +40,16 @@ namespace EventManagmentTask.Services
                 Transformation = new Transformation().Width(500).Height(500).Crop("fill")
             };
 
+            //var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+            //if (uploadResult.Error != null)
+            //    throw new Exception($"Cloudinary upload failed: {uploadResult.Error.Message}");
+
             var uploadResult = await _cloudinary.UploadAsync(uploadParams);
             if (uploadResult.Error != null)
-                throw new Exception($"Cloudinary upload failed: {uploadResult.Error.Message}");
+            {
+                _logger.LogError($"Cloudinary error: {uploadResult.Error.Message}, StatusCode: {uploadResult.StatusCode}");
+                throw new Exception($"Cloudinary upload failed: {uploadResult.Error.Message}, StatusCode: {uploadResult.StatusCode}");
+            }
 
             _logger.LogInformation($"File uploaded successfully. Public URL: {uploadResult.SecureUrl}");
             return uploadResult.SecureUrl.AbsoluteUri;
