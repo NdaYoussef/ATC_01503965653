@@ -1,4 +1,4 @@
-# Markdown Project
+# Event Managment  Project
 
 ## Overview
 This project is designed to provide a comprehensive set of markdown files that serve as documentation for various purposes. It includes an introduction to the project, a detailed guide on usage, and resources for further reference.

@@ -1,4 +1,4 @@
-# Introduction to Markdown Project
+# Introduction to Event Managment  Project
 
 Welcome to the Markdown Project! This project aims to provide a comprehensive framework for creating and managing markdown documents efficiently. 
 
