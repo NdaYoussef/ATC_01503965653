@@ -17,7 +17,7 @@ namespace EventManagmentTask.Controllers
             _cloudinaryService = cloudinaryService;
             _logger = logger;
         }
-        [Authorize(Policy = "Admin")]
+
         [HttpPost("upload")]
         public async Task<IActionResult> UploadImage(IFormFile file)
         { 

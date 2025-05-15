@@ -48,7 +48,7 @@ namespace EventManagmentTask.Controllers
         }
 
 
-        [Authorize(Policy = "Admin and Organizer")]
+  //      [Authorize(Policy = "Admin and Organizer")]
 
         [HttpPost("AddEvent")]
 

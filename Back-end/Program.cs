@@ -65,6 +65,24 @@ namespace EventManagmentTask
             });
             #endregion
 
+
+
+            #region Lazy Loading injection
+            builder.Services.AddDbContext<EventManagmentDbContext>(options =>
+            options.UseLazyLoadingProxies()
+           .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            #endregion
+
+            #region  Inject Services 
+            builder.Services.AddScoped<ICloudinaryRepository, CloudinaryService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IEventRepository, EventService>();
+            builder.Services.AddScoped<IAccountRepository, AccountService>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryService>();
+            builder.Services.AddScoped<IBookingRepository, BookingService>();
+            #endregion
+
             #region Cloudinary Settings&Dependency Injection
             builder.Services.Configure<CloudinarySettings>(
                builder.Configuration.GetSection("CloudinarySettings"));
@@ -82,22 +100,6 @@ namespace EventManagmentTask
             var cloudinary = new Cloudinary(account);
 
             builder.Services.AddSingleton(cloudinary);
-            #endregion
-
-            #region Lazy Loading injection
-            builder.Services.AddDbContext<EventManagmentDbContext>(options =>
-            options.UseLazyLoadingProxies()
-           .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            #endregion
-
-            #region  Inject Services 
-            builder.Services.AddScoped<ICloudinaryRepository, CloudinaryService>();
-            builder.Services.AddScoped<ITokenService, TokenService>();
-            builder.Services.AddScoped<IEventRepository, EventService>();
-            builder.Services.AddScoped<IAccountRepository, AccountService>();
-            builder.Services.AddScoped<ICategoryRepository, CategoryService>();
-            builder.Services.AddScoped<IBookingRepository, BookingService>();
             #endregion
 
             #region Adding mapster 
@@ -141,7 +143,8 @@ namespace EventManagmentTask
             });
 
             #endregion
-
+            // Add this before app.UseAuthorization()
+         
 
             var app = builder.Build();
             #region seed roles in DB
@@ -157,11 +160,15 @@ namespace EventManagmentTask
             // Configure the HTTP request pipeline.
             // if (app.Environment.IsDevelopment())
             // {
+            app.UseCors(options =>
+             options.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader());
             app.UseSwagger();
             app.UseSwaggerUI();
             //  }
 
-            // app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
 

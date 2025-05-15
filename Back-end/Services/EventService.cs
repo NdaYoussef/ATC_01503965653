@@ -125,22 +125,27 @@ namespace EventManagmentTask.Services
                 };
             }
 
-            var eventEntity = eventDto.Adapt<Event>();
-            eventEntity.UserId = userId;  // User id 
-
-            _context.Events.Add(eventEntity);
-
-            foreach (var tagId in eventDto.TagIds!)
+            var newEvent = new Event
             {
-                var tag = await _context.Tags.FindAsync(tagId);
-                if (tag != null)
-                {
-                    eventEntity.Tags.Add(tag);
-                }
+                Title = eventDto.Title,
+                Description = eventDto.Description,
+                Image = eventDto.Image,
+                Location = eventDto.Location,
+                CreatedDate = eventDto.CreatedDate,
+                CategoryId = eventDto.CategoryId,
+                UserId = userId
+            };
+
+            if (eventDto.TagIds != null && eventDto.TagIds.Any())
+            {
+                newEvent.Tags = await _context.Tags
+                    .Where(tag => eventDto.TagIds.Contains(tag.Id))
+                    .ToListAsync();
             }
 
+            _context.Events.Add(newEvent);
             await _context.SaveChangesAsync();
-            var dto = eventEntity.Adapt<EventDto>();
+            var dto = newEvent.Adapt<EventDto>();
 
             return new ResponseDto
             {
@@ -150,6 +155,7 @@ namespace EventManagmentTask.Services
                 Data = dto
             };
         }
+
 
         public async Task<ResponseDto> EditEvent(EventDto eventDto, int id)
         {
