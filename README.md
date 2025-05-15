@@ -43,10 +43,10 @@ A robust ASP.NET Core Web API for managing events, bookings, and user authentica
 - MonsterASP account
 
 ### Database ERD
-![Database ERD](C:/Users/ASUS/OneDrive/Pictures/Screenshots/Screenshot 2025-05-15 224212.png)
+![Database ERD](C:\Users\ASUS\OneDrive\Pictures\Screenshots\ERD.png)
 
 ### Database Schema
-![Database Schema](C:/Users/ASUS/OneDrive/Pictures/Screenshots/Screenshot 2025-05-08 155810.png)
+![Database Schema]("C:\Users\ASUS\OneDrive\Pictures\Screenshots\Schema.png")
 
 
 
