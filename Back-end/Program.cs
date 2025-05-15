@@ -1,4 +1,3 @@
-
 using CloudinaryDotNet;
 using EventManagmentTask.Data;
 using EventManagmentTask.Interfaces;
@@ -34,14 +33,14 @@ namespace EventManagmentTask
 
             #region Connection String
             builder.Services.AddDbContext<EventManagmentDbContext>(options =>
-            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             #endregion
 
             #region Add identity
             builder.Services.AddIdentity<User, IdentityRole>()
                              .AddEntityFrameworkStores<EventManagmentDbContext>()
-                             .AddDefaultTokenProviders(); 
+                             .AddDefaultTokenProviders();
             #endregion
 
             #region Add Authentication 
@@ -63,7 +62,7 @@ namespace EventManagmentTask
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!)),
                     ClockSkew = TimeSpan.Zero
                 };
-            }); 
+            });
             #endregion
 
             #region Cloudinary Settings&Dependency Injection
@@ -88,7 +87,7 @@ namespace EventManagmentTask
             #region Lazy Loading injection
             builder.Services.AddDbContext<EventManagmentDbContext>(options =>
             options.UseLazyLoadingProxies()
-           .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+           .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             #endregion
 
@@ -106,7 +105,7 @@ namespace EventManagmentTask
             TypeAdapterConfig.GlobalSettings.Scan(typeof(MapsterConfig).Assembly);
             #endregion
 
-            
+
             #region Add authorization headers
             builder.Services.AddSwaggerGen(options =>
             {
@@ -134,15 +133,15 @@ namespace EventManagmentTask
 
             #region Add authorization policy
             builder.Services.AddAuthorization(options =>
-             {
-                 options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
-                 options.AddPolicy("Organizer", policy => policy.RequireRole("Organizer"));
-                 options.AddPolicy("CLient", policy => policy.RequireRole("CLient"));
-                 options.AddPolicy("Admin and Organizer", policy => policy.RequireRole("Admin", "Organizer"));
-             });
+            {
+                options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("Organizer", policy => policy.RequireRole("Organizer"));
+                options.AddPolicy("CLient", policy => policy.RequireRole("CLient"));
+                options.AddPolicy("Admin and Organizer", policy => policy.RequireRole("Admin", "Organizer"));
+            });
 
             #endregion
- 
+
 
             var app = builder.Build();
             #region seed roles in DB
@@ -156,19 +155,19 @@ namespace EventManagmentTask
             #endregion
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            // if (app.Environment.IsDevelopment())
+            // {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            //  }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
 
             app.Run();
 
-         
+
         }
     }
 }

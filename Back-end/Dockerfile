@@ -31,6 +31,6 @@ RUN dotnet publish -c ${BUILD_CONFIGURATION} -o /app/publish /p:UseAppHost=false
 #================================
 FROM base AS final
 WORKDIR /app
+ENV ASPNETCORE_URLS=http://+:80
 COPY --from=publish /app/publish .
-COPY ./Templates/WelcomeEmailTemplate.html /app/Templates/WelcomeEmailTemplate.html
-ENTRYPOINT [ "dotnet", "EcoPowerHub.dll" ]
+ENTRYPOINT [ "dotnet", "EventManagmentTask.dll" ]

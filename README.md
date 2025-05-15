@@ -24,25 +24,42 @@ A robust ASP.NET Core Web API for managing events, bookings, and user authentica
 ## 🛠️ Tech Stack
 
 - *Framework*: ASP.NET Core 8.0
-- *Database*: PostgreSQL with Entity Framework Core
+- *Database*: Microsoft SQL Server with Entity Framework Core
 - *Authentication*: JWT Bearer with Identity
 - *Image Storage*: Cloudinary
 - *Object Mapping*: Mapster
 - *Documentation*: Swagger/OpenAPI
+- *Deployment*: Amazon Web Service (AWS)
+- *Containers*: Docker
+
 
 ## 📋 Prerequisites
 
 - .NET 8.0 SDK
-- PostgreSQL
+- Microsoft SQL Server 2022
 - Cloudinary account
 - Docker
+- AWS account
+- MonsterASP account
+
+### Database ERD
+![Database ERD](C:/Users/ASUS/OneDrive/Pictures/Screenshots/Screenshot 2025-05-15 224212.png)
+
+### Database Schema
+![Database Schema](C:/Users/ASUS/OneDrive/Pictures/Screenshots/Screenshot 2025-05-08 155810.png)
+
+
 
 ## ⚙️ Configuration
 
 ### Database Connection
-Update appsettings.json with your PostgreSQL connection string:
+Update appsettings.json with your Micosoft SQl Server connection string:
 
 ```json
 "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Database=EventBookingSystem;Username=your_username;Password=your_password"
+    "DefaultConnection": "Host=localhost;Port=1433;Database=EventBookingSystem;Username=your_username;Password=your_password"
 }
+
+
+
+

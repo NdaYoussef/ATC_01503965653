@@ -11,7 +11,7 @@
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public string UserId { get; set; }  // FK to User
         public virtual User User { get; set; }
