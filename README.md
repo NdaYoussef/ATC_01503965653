@@ -44,10 +44,10 @@ A robust ASP.NET Core Web API for managing events, bookings, and user authentica
 
 
 ### Database ERD
-![Database ERD]("./images/ERD")
+![Database ERD]("images/ERD")
 
 ### Database Schema
-![Database Schema]("./images/Schema")
+![Database Schema]("images/Schema")
 
 ## ⚙️ Configuration
 
