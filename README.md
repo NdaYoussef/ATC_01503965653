@@ -1,18 +1,48 @@
-# Event Managment  Project
+# Event Management System API
 
-## Overview
-This project is designed to provide a comprehensive set of markdown files that serve as documentation for various purposes. It includes an introduction to the project, a detailed guide on usage, and resources for further reference.
+A robust ASP.NET Core Web API for managing events, bookings, and user authentication.
 
-## Installation Instructions
-To get started with this project, clone the repository and navigate to the project directory:
+## 🚀 Features
 
-```bash
-git clone <repository-url>
-cd markdown-project
-```
+- *Authentication & Authorization*
+  - JWT-based authentication
+  - Role-based authorization (Admin, Client, Organizer)
+  - Refresh token mechanism
+  - Secure password handling
 
-## Usage
-Once you have the project set up, you can access the documentation files located in the `docs` directory. The `introduction.md` file provides an overview of the project, while the `guide.md` file offers detailed instructions on how to utilize the features of the project.
+- *Event Management*
+  - Create, read, update, and delete events
+  - Category management
+  - Tag support for events
+  - Image upload via Cloudinary
 
-## Contribution Guidelines
-We welcome contributions to this project! If you would like to contribute, please fork the repository and submit a pull request with your changes. Ensure that your contributions adhere to the project's coding standards and include appropriate documentation.
+- *Booking System*
+  - Event booking functionality
+  - Booking status management
+  - User booking history
+
+## 🛠️ Tech Stack
+
+- *Framework*: ASP.NET Core 8.0
+- *Database*: PostgreSQL with Entity Framework Core
+- *Authentication*: JWT Bearer with Identity
+- *Image Storage*: Cloudinary
+- *Object Mapping*: Mapster
+- *Documentation*: Swagger/OpenAPI
+
+## 📋 Prerequisites
+
+- .NET 8.0 SDK
+- PostgreSQL
+- Cloudinary account
+- Docker
+
+## ⚙️ Configuration
+
+### Database Connection
+Update appsettings.json with your PostgreSQL connection string:
+
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=EventBookingSystem;Username=your_username;Password=your_password"
+}
