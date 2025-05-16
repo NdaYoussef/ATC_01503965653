@@ -73,3 +73,7 @@ Update appsettings.json with your Micosoft SQl Server connection string:
 - Responsive Design: Tailwind CSS utilities
 - Animations: Custom Tailwind CSS animations
 
+### How to access the Api that deployed on Docker container on AWS 
+http://157.175.182.159:8100/swagger/index.html
+
+
