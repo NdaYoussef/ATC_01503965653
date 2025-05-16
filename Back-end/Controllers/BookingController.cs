@@ -61,7 +61,7 @@ namespace EventManagmentTask.Controllers
             return StatusCode(response.StatusCode, new { response.Message });
         }
 
-  //      [Authorize(Policy = "CLient")]
+        [Authorize(Policy = "CLient")]
 
         [HttpPost("CreateBooking")]
         public async Task<IActionResult> CreateBooking(BookingDto booking)
