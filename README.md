@@ -32,6 +32,13 @@ A robust ASP.NET Core Web API for managing events, bookings, and user authentica
 - *Deployment*: Amazon Web Service (AWS)
 - *Containers*: Docker
 
+### Architecture
+
+- Repository Pattern
+- SOLID principles
+- Lazy Loading 
+- Depencency Injection 
+
 
 ## 📋 Prerequisites
 
@@ -57,7 +64,12 @@ Update appsettings.json with your Micosoft SQl Server connection string:
 "ConnectionStrings": {
     "DefaultConnection": "Host=localhost;Port=1433;Database=EventBookingSystem;Username=your_username;Password=your_password"
 }
-
-
-
+```
+### Front-end 
+- Markup: HTML5
+- Styling: Tailwind CSS (via CDN)
+- Scripting: Vanilla JavaScript
+- Image Optimization: Unlazy
+- Responsive Design: Tailwind CSS utilities
+- Animations: Custom Tailwind CSS animations
 
